@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <title>Store Down</title>
+        <link rel="icon" href="icon.png" />
+        <link rel="apple-touch-icon" href="icon.png" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="mainDiv">
+            <form>
+                <h2>Store Down</h2>
+                <table>
+                    <tr>
+                        <td><label>Store Name: </label></td>
+                        <td><input type="text" id="Name" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Code: </label></td>
+                        <td><input type="text" id="Code" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Sectors: </label></td>
+                        <td><input type="text" id="Sectors" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Governorate: </label></td>
+                        <td><input type="text" id="Governorate" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>District: </label></td>
+                        <td><input type="text" id="District" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Reason: </label></td>
+                        <td><input type="text" id="Reason" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>From: </label></td>
+                        <td><input type="text" id="From" /></td>
+                    </tr>
+                </table>
+                <br />
+                <button type="button" onclick="Send()">Generate</button>
+                <br />
+                <br />
+            </form>
+        </div>
+        <script>
+            function Send() {
+                if (document.getElementById("Name").value == "") {
+                    document.getElementById("Name").focus();
+                    return false;
+                } else if (document.getElementById("Code").value == "") {
+                    document.getElementById("Code").focus();
+                    return false;
+                } else if (document.getElementById("Sectors").value == "") {
+                    document.getElementById("Sectors").focus();
+                    return false;
+                } else if (document.getElementById("Governorate").value == "") {
+                    document.getElementById("Governorate").focus();
+                    return false;
+                } else if (document.getElementById("District").value == "") {
+                    document.getElementById("District").focus();
+                    return false;
+                } else if (document.getElementById("Reason").value == "") {
+                    document.getElementById("Reason").focus();
+                    return false;
+                } else if (document.getElementById("From").value == "") {
+                    document.getElementById("From").focus();
+                    return false;
+                } else {
+                    var Code = document.getElementById("Code").value;
+                    var Name = document.getElementById("Name").value;
+                    var Sectors = document.getElementById("Sectors").value;
+                    var Governorate = document.getElementById("Governorate").value;
+                    var District = document.getElementById("District").value;
+                    var Reason = document.getElementById("Reason").value;
+                    var From = document.getElementById("From").value;
+                    var subject = "Store down " + "due to " + Reason + " || " + Name;
+                    window.open(
+                        "mailto:MiddleUpperEgyptTeamindirect@te.eg;Franchising.sales@te.eg;franchise.support@te.eg;DP-Updates@te.eg;kmpupdates-sales@te.eg;knowledge.management@te.eg;Homesales-PP@te.eg?cc=ahmed.g.abdelwahed@te.eg;eslam.a.gomaa@te.eg&subject=" +
+                            subject +
+                            "&body=Dears,%0d%0a%0d%0aKindly be informed that the below store is down due to " +
+                            Reason +
+                            " since " +
+                            From +
+                            ", and we will keep you updated once store up again." +
+                            "%0d%0a%0d%0a" +
+                            "Store Code: " +
+                            Code +
+                            "%0d%0a" +
+                            "Branch Name: " +
+                            Name +
+                            "%0d%0a" +
+                            "Sectors: " +
+                            Sectors +
+                            "%0d%0a" +
+                            "Governorate: " +
+                            Governorate +
+                            "%0d%0a" +
+                            "District: " +
+                            District +
+                            "%0d%0a%0d%0a" +
+                            "%0d%0aThanks."
+                    );
+                }
+            }
+        </script>
+        <br />
+        <footer>
+            <p class="footer">Developed by: Mamdouh Khalaf (Al Monshah Store Manager)</p>
+        </footer>
+    </body>
+</html>
