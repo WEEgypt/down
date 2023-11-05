@@ -14,7 +14,7 @@
                 <h2>Store Down</h2>
                 <table>
                     <tr>
-                        <td><label>Store Name: </label></td>
+                        <td><label>Name: </label></td>
                         <td><input type="text" id="Name" /></td>
                     </tr>
                     <tr>
@@ -22,8 +22,16 @@
                         <td><input type="text" id="Code" /></td>
                     </tr>
                     <tr>
-                        <td><label>Sectors: </label></td>
-                        <td><input type="text" id="Sectors" /></td>
+                        <td><label>Partner: </label></td>
+                        <td><input type="text" id="Partner" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Classification: </label></td>
+                        <td><input type="text" id="Classification" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Region: </label></td>
+                        <td><input type="text" id="Region" /></td>
                     </tr>
                     <tr>
                         <td><label>Governorate: </label></td>
@@ -56,8 +64,14 @@
                 } else if (document.getElementById("Code").value == "") {
                     document.getElementById("Code").focus();
                     return false;
-                } else if (document.getElementById("Sectors").value == "") {
-                    document.getElementById("Sectors").focus();
+                } else if (document.getElementById("Partner").value == "") {
+                    document.getElementById("Partner").focus();
+                    return false;
+                } else if (document.getElementById("Classification").value == "") {
+                    document.getElementById("Classification").focus();
+                    return false;
+                } else if (document.getElementById("Region").value == "") {
+                    document.getElementById("Region").focus();
                     return false;
                 } else if (document.getElementById("Governorate").value == "") {
                     document.getElementById("Governorate").focus();
@@ -72,9 +86,11 @@
                     document.getElementById("From").focus();
                     return false;
                 } else {
-                    var Code = document.getElementById("Code").value;
                     var Name = document.getElementById("Name").value;
-                    var Sectors = document.getElementById("Sectors").value;
+                    var Code = document.getElementById("Code").value;
+                    var Partner = document.getElementById("Partner").value;
+                    var Classification = document.getElementById("Classification").value;
+                    var Region = document.getElementById("Region").value;
                     var Governorate = document.getElementById("Governorate").value;
                     var District = document.getElementById("District").value;
                     var Reason = document.getElementById("Reason").value;
@@ -89,14 +105,20 @@
                             From +
                             ", and we will keep you updated once store up again." +
                             "%0d%0a%0d%0a" +
-                            "Store Code: " +
+                            "Code: " +
                             Code +
                             "%0d%0a" +
-                            "Branch Name: " +
+                            "Name: " +
                             Name +
                             "%0d%0a" +
-                            "Sectors: " +
-                            Sectors +
+                            "Partner : " +
+                            Partner +
+                            "%0d%0a" +
+                            "Classification : " +
+                            Classification +
+                            "%0d%0a" +
+                            "Region: " +
+                            Region +
                             "%0d%0a" +
                             "Governorate: " +
                             Governorate +
