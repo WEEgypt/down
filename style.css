@@ -61,3 +61,7 @@ table {
     width: -webkit-fill-available;
     width: -moz-available;
 }
+select {
+    width: -webkit-fill-available !important;
+    width: -moz-available !important;
+}
