@@ -1,28 +1,25 @@
 :root {
-    --bg: #f2f2f2;
-    --mainDiv: #fff;
-    --color: #2d3737;
+    --bg: #fff;
+    --color: #000;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #000;
-        --mainDiv: #2d3737;
         --color: #fff;
     }
 }
 html {
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100%;
 }
 body {
-    font-family: verdana;
-    font-size: 14px;
     margin: auto;
     min-width: max-content;
+    padding: 20px;
+    font-family: verdana;
+    font-size: 14px;
+    line-height: 26px;
     color: var(--color);
-    padding: 10px;
     background-color: var(--bg);
 }
 h2 {
@@ -36,32 +33,28 @@ p {
 label {
     display: inline-block;
 }
-td {
-    height: 28px;
-}
-input[type="tel"] {
-    width: 200px;
-}
 button {
     float: right;
-}
-select:focus {
-    outline-style: auto;
-}
-.mainDiv {
-    background-color: var(--mainDiv);
-    padding: 20px 30px 20px 30px;
-}
-.footer {
-    text-align: center;
-    font-size: 9px;
-    padding-top: 8px;
 }
 table {
     width: -webkit-fill-available;
     width: -moz-available;
 }
+td {
+    height: 28px;
+}
+input[type="time"] {
+    width: 240px;
+}
 select {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
+}
+select:focus {
+    outline-style: auto;
+}
+.footer {
+    text-align: center;
+    font-size: 9px;
+    padding-top: 8px;
 }

@@ -9,60 +9,66 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="mainDiv">
-            <form>
-                <h2>Store Down</h2>
-                <table>
-                    <tr>
-                        <td><label>Store: </label></td>
-                        <td>
-                            <select id="store">
-                                <option value="0" selected disabled hidden>Store Name</option>
-                                <option value="1">شرق النيل</option>
-                                <option value="2">نادى التجديف</option>
-                                <option value="3">بيت الرحمه</option>
-                                <option value="4">الشهيد</option>
-                                <option value="5">اخميم</option>
-                                <option value="6">المنشاه</option>
-                                <option value="7">جرجا - المصريه جروب</option>
-                                <option value="8">جرجا - فيوتشر</option>
-                                <option value="9">البلينا - فيوتشر</option>
-                                <option value="10">البلينا - تليكوم</option>
-                                <option value="11">دار السلام</option>
-                                <option value="12">طهطا - المصريه جروب</option>
-                                <option value="13">طهطا - فيوتشر</option>
-                                <option value="14">المراغه - المصريه جروب</option>
-                                <option value="15">المراغه - فيوتشر</option>
-                                <option value="16">طما - فيوتشر</option>
-                                <option value="17">طما - كافريج</option>
-                                <option value="18">مجمع المحاكم</option>
-                                <option value="19">شارع 15</option>
-                                <option value="20">المخبز الآلي</option>
-                                <option value="21">جهينه</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label>Reason: </label></td>
-                        <td><input type="text" id="Reason" /></td>
-                    </tr>
-                    <tr>
-                        <td><label>From: </label></td>
-                        <td><input type="text" id="From" /></td>
-                    </tr>
-                </table>
-                <br />
-                <button type="button" onclick="Generate()">Generate</button>
-                <br />
-                <br />
-            </form>
-        </div>
+        <form>
+            <h2>Store Down</h2>
+            <table>
+                <tr>
+                    <td><label>Store: </label></td>
+                    <td>
+                        <select id="store">
+                            <option value="0" selected disabled hidden>Store Name</option>
+                            <option value="1">شرق النيل</option>
+                            <option value="2">نادى التجديف</option>
+                            <option value="3">بيت الرحمه</option>
+                            <option value="4">الشهيد</option>
+                            <option value="5">اخميم</option>
+                            <option value="6">المنشاه</option>
+                            <option value="7">جرجا - المصريه جروب</option>
+                            <option value="8">جرجا - فيوتشر</option>
+                            <option value="9">البلينا - فيوتشر</option>
+                            <option value="10">البلينا - تليكوم</option>
+                            <option value="11">دار السلام</option>
+                            <option value="12">طهطا - المصريه جروب</option>
+                            <option value="13">طهطا - فيوتشر</option>
+                            <option value="14">المراغه - المصريه جروب</option>
+                            <option value="15">المراغه - فيوتشر</option>
+                            <option value="16">طما - فيوتشر</option>
+                            <option value="17">طما - كافريج</option>
+                            <option value="18">مجمع المحاكم</option>
+                            <option value="19">شارع 15</option>
+                            <option value="20">المخبز الآلي</option>
+                            <option value="21">جهينه</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Reason: </label></td>
+                    <td>
+                        <select id="Reason">
+                            <option value="0" selected disabled hidden>Reason</option>
+                            <option value="Electricity Down">Electricity Down</option>
+                            <option value="Network Issue">Network Issue</option>
+                            <option value="BSS Limit">BSS Limit</option>
+                            <option value="Maintenance">Maintenance</option>
+                            <option value="Agent Issue">Agent Issue</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>From: </label></td>
+                    <td><input type="time" id="From" /></td>
+                </tr>
+            </table>
+            <br />
+            <button type="button" onclick="Generate()">Generate</button>
+            <br />
+        </form>
         <script>
             function Generate() {
                 if (document.getElementById("store").value == "0") {
                     document.getElementById("store").focus();
                     return false;
-                } else if (document.getElementById("Reason").value == "") {
+                } else if (document.getElementById("Reason").value == "0") {
                     document.getElementById("Reason").focus();
                     return false;
                 } else if (document.getElementById("From").value == "") {
@@ -180,6 +186,8 @@
                     var District = "Sohag";
                     var Reason = document.getElementById("Reason").value;
                     var From = document.getElementById("From").value;
+                    const timeString = From;
+                    const timeString12hr = new Date("1970-01-01T" + timeString + "Z").toLocaleTimeString("en-EG", { timeZone: "UTC", hour12: true, hour: "numeric", minute: "numeric" });
                     var subject = "Store down " + "due to " + Reason + " || " + Name;
                     window.open(
                         "mailto:MiddleUpperEgyptTeamindirect@te.eg;Franchising.sales@te.eg;franchise.support@te.eg;DP-Updates@te.eg;kmpupdates-sales@te.eg;knowledge.management@te.eg;Homesales-PP@te.eg?cc=ahmed.g.abdelwahed@te.eg;eslam.a.gomaa@te.eg&subject=" +
@@ -187,8 +195,8 @@
                             "&body=Dears,%0d%0a%0d%0aKindly be informed that the below store is down due to " +
                             Reason +
                             " since " +
-                            From +
-                            ", and we will keep you updated once store up again." +
+                            timeString12hr +
+                            ", and we will keep you updated." +
                             "%0d%0a%0d%0a" +
                             "Code: " +
                             Code +
@@ -213,7 +221,6 @@
                 }
             }
         </script>
-        <br />
         <footer>
             <p class="footer">Developed by: Mamdouh Khalaf .. "MUE Team"</p>
         </footer>
