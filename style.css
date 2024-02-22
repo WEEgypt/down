@@ -48,8 +48,6 @@ input[type="time"] {
     display: flex;
     justify-content: center;
     text-align: center;
-    justify-items: center;
-    text-align: center;
 }
 select {
     width: -webkit-fill-available !important;
