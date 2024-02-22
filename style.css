@@ -46,9 +46,6 @@ td {
 input[type="time"] {
     width: 240px;
 }
-input {
-    text-align: center;
-}
 select {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
@@ -61,4 +58,7 @@ select:focus {
     text-align: center;
     font-size: 9px;
     padding-top: 8px;
+}
+.center {
+  text-align: center;
 }
