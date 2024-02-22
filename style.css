@@ -45,12 +45,12 @@ td {
 }
 input[type="time"] {
     width: 240px;
-    text-align: center;
+    text-align: left;
 }
 select {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
-    text-align: center;
+    text-align: left;
 }
 select:focus {
     outline-style: auto;
