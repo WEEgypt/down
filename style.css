@@ -47,7 +47,6 @@ input[type="time"] {
     width: 240px;
     display: table;
     text-align: center;
-    appearance: inherit;
 }
 select {
     width: -webkit-fill-available !important;
