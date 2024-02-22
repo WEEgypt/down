@@ -45,7 +45,9 @@ td {
 }
 input[type="time"] {
     width: 240px;
-    text-indent: 28%;
+    display: table;
+    text-align: center;
+    appearance: inherit;
 }
 select {
     width: -webkit-fill-available !important;
