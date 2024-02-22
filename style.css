@@ -46,7 +46,7 @@ td {
 input[type="time"] {
     width: 240px;
     display: flex;
-    justify-content: center;
+    justify-items: center;
     text-align: center;
 }
 select {
