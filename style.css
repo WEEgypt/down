@@ -44,12 +44,15 @@ td {
     height: 28px;
 }
 input[type="time"] {
-    width: 240px !important;
+    width: 240px;
+}
+input[type="time" i] {
+    text-align: center;
 }
 select {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
-    text-align-last:center !important;
+    text-align-last: center;
 }
 select:focus {
     outline-style: auto;
