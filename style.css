@@ -50,7 +50,7 @@ input[type="time"] {
     text-align: center;
 }
 input[type="time"]::-webkit-calendar-picker-indicator {
-   display: block;
+    display: none;
 }
 select {
     width: -webkit-fill-available !important;
