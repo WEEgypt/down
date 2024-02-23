@@ -49,9 +49,6 @@ input[type="time"] {
     justify-content: center;
     text-align: center;
 }
-input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none;
-}
 select {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
@@ -64,7 +61,4 @@ select:focus {
     text-align: center;
     font-size: 9px;
     padding-top: 8px;
-}
-.center {
-	text-align-last: center;
 }
