@@ -48,12 +48,7 @@ input[type="time"] {
     display: flex;
     justify-content: center;
     text-align: center;
-}
-input[type=time]::-webkit-inner-spin-button {
-  display: flex;
-}
-input[type=time]::-webkit-datetime-edit-fields-wrapper {
-  display: flex;
+	-webkit-appearance: block;
 }
 select {
     width: -webkit-fill-available !important;
