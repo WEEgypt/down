@@ -46,8 +46,14 @@ td {
 input[type="time"] {
     width: 240px;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     text-align: center;
+}
+input[type=time]::-webkit-inner-spin-button {
+  display: flex;
+}
+input[type=time]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
 }
 select {
     width: -webkit-fill-available !important;
