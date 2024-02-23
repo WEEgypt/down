@@ -48,7 +48,9 @@ input[type="time"] {
     display: flex;
     justify-content: center;
     text-align: center;
-	-webkit-appearance: block;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+   display: block;
 }
 select {
     width: -webkit-fill-available !important;
