@@ -8,7 +8,7 @@
         <link rel="apple-touch-icon" href="icon.png" />
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <body onload="getTime();">
         <form>
             <h2>Store Down</h2>
             <table>
@@ -64,6 +64,16 @@
             <br />
         </form>
         <script>
+            function getTime() {
+                const getTwoDigits = (value) => (value < 10 ? `0${value}` : value);
+                const formatTime = (date) => {
+                    const hours = getTwoDigits(date.getHours());
+                    const mins = getTwoDigits(date.getMinutes());
+                    return `${hours}:${mins}`;
+                };
+                const date = new Date();
+                document.getElementById("From").value = formatTime(date);
+            }
             function Generate() {
                 if (document.getElementById("store").value == "0") {
                     document.getElementById("store").focus();
