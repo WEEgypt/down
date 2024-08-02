@@ -38,6 +38,7 @@
                             <option value="19">شارع 15</option>
                             <option value="20">المخبز الآلي</option>
                             <option value="21">جهينه</option>
+                            <option value="22">برديس</option>
                         </select>
                     </td>
                 </tr>
@@ -188,6 +189,12 @@
                     var Name = "سوهاج - جهينة";
                     var Code = "WT10BA100322";
                     var Partner = "Deltawia coverage FRA";
+                    Send();
+                }
+                } else if (document.getElementById("store").value == "22") {
+                    var Name = "برديس";
+                    var Code = "WT09BB291023";
+                    var Partner = "El Masrya GR";
                     Send();
                 }
                 function Send() {
