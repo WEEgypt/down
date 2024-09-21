@@ -1,0 +1,15 @@
+{
+    "name": "Store Down",
+    "short_name": "Store Down",
+    "description": "Store Down.",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "index.html",
+    "display_override": ["fullscreen", "minimal-ui"],
+    "display": "standalone"
+}
