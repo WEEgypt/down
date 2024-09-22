@@ -1,4 +1,5 @@
 {
+    "theme_color": "#5b2c92",
     "background_color": "#5b2c92",
     "icons": [
         { "purpose": "maskable", "sizes": "512x512", "src": "icon512_maskable.png", "type": "image/png" },
