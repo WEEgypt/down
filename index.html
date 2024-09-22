@@ -91,9 +91,9 @@ button.addEventListener("click", () => {
 function randomNotification() {
 games = ["pubg", "free fiire", "asphalt8"]
   const randomItem = Math.floor(Math.random() * games.length);
-  const notifTitle = games[randomItem].name;
-  const notifBody = `Created by ${games[randomItem].author}.`;
-  const notifImg = `data/img/${games[randomItem].slug}.jpg`;
+  const notifTitle = games[randomItem];
+  const notifBody = `Created by Mamdouh Khalaf.`;
+  const notifImg = `icon.png`;
   const options = {
     body: notifBody,
     icon: notifImg,
