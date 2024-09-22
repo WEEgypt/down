@@ -6,6 +6,14 @@
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta
+  name="theme-color"
+  content="#F4E6D8"
+  media="(prefers-color-scheme: light)" />
+<meta
+  name="theme-color"
+  content="#5D4037"
+  media="(prefers-color-scheme: dark)" />
         <title>Store Down</title>
         <link rel="icon" href="icon.png" />
         <link rel="apple-touch-icon" href="icon.png" />
@@ -81,6 +89,7 @@ button.addEventListener("click", () => {
   });
 });
 function randomNotification() {
+games = ["pubg", "free fiire", "asphalt8"]
   const randomItem = Math.floor(Math.random() * games.length);
   const notifTitle = games[randomItem].name;
   const notifBody = `Created by ${games[randomItem].author}.`;
