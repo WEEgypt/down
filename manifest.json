@@ -1,15 +1,14 @@
 {
-    "theme_color": "#5b2c92",
+    "name": "Store Down",
+    "short_name": "Down",
+    "start_url": "index.html",
+    "display": "standalone",
+    "orientation": "any",
+    "lang": "en-US",
     "background_color": "#5b2c92",
+    "description": "Store Down - Developed by Mamdouh Khalaf.",
     "icons": [
         { "purpose": "maskable", "sizes": "512x512", "src": "icon512_maskable.png", "type": "image/png" },
         { "purpose": "any", "sizes": "512x512", "src": "icon512_rounded.png", "type": "image/png" }
-    ],
-    "orientation": "any",
-    "display": "standalone",
-    "lang": "en-US",
-    "name": "Store Down",
-    "short_name": "Down+",
-    "start_url": "index.html",
-    "description": "Developed by Mamdouh Khalaf"
+    ]
 }

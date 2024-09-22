@@ -11,12 +11,11 @@
         <link rel="apple-touch-icon" href="icon.png" />
         <link rel="stylesheet" href="style.css" />
         <link rel="manifest" href="manifest.json" />
-        <script async src="service-worker.js"></script>
-        <script async src="pulltorefresh.js"></script>
+        <script src="service-worker.js" defer></script>
     </head>
     <body onload="getTime();">
         <form>
-            <h2 id="notifications">Store Down</h2>
+            <h2>Store Down</h2>
             <table>
                 <tr>
                     <td><label>Store: </label></td>
@@ -71,36 +70,6 @@
             <br />
         </form>
         <script>
-		
-const button = document.getElementById("notifications");
-button.addEventListener("click", () => {
-  Notification.requestPermission().then((result) => {
-    if (result === "granted") {
-      randomNotification();
-    }
-  });
-});
-function randomNotification() {
-games = ["pubg", "free fiire", "asphalt8"]
-  const randomItem = Math.floor(Math.random() * games.length);
-  const notifTitle = games[randomItem];
-  const notifBody = `Created by Mamdouh Khalaf.`;
-  const notifImg = `icon.png`;
-  const options = {
-    body: notifBody,
-    icon: notifImg,
-  };
-  new Notification(notifTitle, options);
-  setTimeout(randomNotification, 30000);
-}
-		
-		
-		
-		
-		
-		
-		
-		
             function getTime() {
                 const getTwoDigits = (value) => (value < 10 ? `0${value}` : value);
                 const formatTime = (date) => {
