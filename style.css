@@ -58,7 +58,7 @@ select {
 }
 input[type="time"],
 select {
-  height: 22px;
+  height: 20px;
   min-width: 220px;
   width: -webkit-fill-available;
   width: -moz-available;
