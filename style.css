@@ -58,13 +58,11 @@ select {
 }
 input[type="time"],
 select {
-  height: 24px;
+  height: 22px;
   min-width: 220px;
   width: -webkit-fill-available;
   width: -moz-available;
-  text-align-last: center;
   border-radius: 4px;
   border: 1px solid var(--color);
-  padding: 0px 0px 0px 0px;
-  margin: 6px 0px 0px 0px;
+  box-sizing: unset;
 }
